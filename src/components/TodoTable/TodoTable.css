@@ -1,0 +1,42 @@
+.root {
+  width: 100%;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  border-collapse: collapse;
+}
+
+.theader {
+  .TodosCell {
+    width: 85%;
+  }
+
+  .ActionsCell {
+    width: 15%;
+  }
+}
+
+.tbody {
+}
+
+.tr {
+}
+
+.titleCompleted {
+  text-decoration: line-through;
+}
+
+.titleActive {
+}
+
+.action {
+}
+
+.complete {
+}
+
+.delete {
+}
+
+.error {
+  color: #c23030;
+}

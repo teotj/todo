@@ -1,0 +1,128 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TodoTable> Should render 1`] = `
+<HTMLTable
+  className="root"
+  interactive={true}
+>
+  <thead
+    className="theader"
+  >
+    <tr>
+      <th
+        className="TodosCell"
+        key="Todos"
+      >
+        Todos
+      </th>
+      <th
+        className="ActionsCell"
+        key="Actions"
+      >
+        Actions
+      </th>
+    </tr>
+  </thead>
+  <tbody
+    className="tbody"
+  >
+    <tr
+      className="tr"
+      key="-id1-"
+    >
+      <td
+        className="titleCompleted"
+      >
+        TodoA
+      </td>
+      <td
+        className="action"
+      >
+        <Blueprint3.Tooltip
+          content="Mark complete"
+          disabled={true}
+          hoverCloseDelay={0}
+          hoverOpenDelay={100}
+          transitionDuration={100}
+        >
+          <Blueprint3.Button
+            className="complete"
+            disabled={true}
+            icon="tick-circle"
+            intent="success"
+            minimal={true}
+            onClick={[Function]}
+          />
+        </Blueprint3.Tooltip>
+        <Blueprint3.Tooltip
+          content="Delete todo"
+          hoverCloseDelay={0}
+          hoverOpenDelay={100}
+          transitionDuration={100}
+        >
+          <Blueprint3.Button
+            className="delete"
+            icon="ban-circle"
+            intent="danger"
+            minimal={true}
+            onClick={[Function]}
+          />
+        </Blueprint3.Tooltip>
+      </td>
+    </tr>
+    <tr
+      className="tr"
+      key="-id2-"
+    >
+      <td
+        className="titleActive"
+      >
+        TodoB
+      </td>
+      <td
+        className="action"
+      >
+        <Blueprint3.Tooltip
+          content="Mark complete"
+          disabled={false}
+          hoverCloseDelay={0}
+          hoverOpenDelay={100}
+          transitionDuration={100}
+        >
+          <Blueprint3.Button
+            className="complete"
+            disabled={false}
+            icon="tick-circle"
+            intent="success"
+            minimal={true}
+            onClick={[Function]}
+          />
+        </Blueprint3.Tooltip>
+        <Blueprint3.Tooltip
+          content="Delete todo"
+          hoverCloseDelay={0}
+          hoverOpenDelay={100}
+          transitionDuration={100}
+        >
+          <Blueprint3.Button
+            className="delete"
+            icon="ban-circle"
+            intent="danger"
+            minimal={true}
+            onClick={[Function]}
+          />
+        </Blueprint3.Tooltip>
+      </td>
+    </tr>
+  </tbody>
+</HTMLTable>
+`;
+
+exports[`<TodoTable> Should render empty results 1`] = `
+<Blueprint3.Callout
+  className="error"
+  intent="danger"
+>
+  Todo list is either empty or filter returns no results.
+</Blueprint3.Callout>
+`;

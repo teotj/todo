@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ErrorBoundary> Should render 1`] = `"OK"`;
+
+exports[`<ErrorBoundary> Should render an error 1`] = `
+<div
+  className="root"
+>
+  <div
+    className="name"
+  >
+    Error name
+  </div>
+  <div
+    className="message"
+  >
+    Error message
+  </div>
+</div>
+`;

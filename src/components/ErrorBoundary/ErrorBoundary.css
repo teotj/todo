@@ -1,0 +1,21 @@
+$color1: #900;
+$color2: #800;
+
+.root {
+  padding: 5px;
+  background: repeating-linear-gradient(135deg, $color1, $color1 10px, $color2 10px, $color2 20px);
+  color: #fff;
+  text-align: left;
+  line-height: 14px;
+}
+
+.name {
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.message {
+  font-size: 10px;
+  font-weight: normal;
+}

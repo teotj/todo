@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Todo store actions Completes item when COMPLETE_ITEM is called 1`] = `
+Object {
+  "items": Array [
+    Object {
+      "id": "-idA-",
+      "isCompleted": true,
+      "title": "titleA",
+    },
+    Object {
+      "id": "-idB-",
+      "isCompleted": false,
+      "title": "titleB",
+    },
+  ],
+}
+`;
