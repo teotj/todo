@@ -9,109 +9,113 @@ exports[`<App> Should render 1`] = `
   >
     Todo
   </Component>
-  <Blueprint3.FormGroup
-    className="formGroup"
-  >
-    <Blueprint3.InputGroup
-      className="todoItem"
-      large={true}
-      onChange={[Function]}
-      placeholder="Add todo here..."
-      rightElement={null}
-      value=""
+  <ErrorBoundary>
+    <Blueprint3.FormGroup
+      className="formGroup"
+    >
+      <Blueprint3.InputGroup
+        className="todoItem"
+        large={true}
+        onChange={[Function]}
+        placeholder="Add todo here..."
+        rightElement={null}
+        value=""
+      />
+    </Blueprint3.FormGroup>
+    <Blueprint3.Button
+      className="add"
+      disabled={true}
+      icon="add"
+      intent="success"
+      onClick={[Function]}
+      text="Add todo"
     />
-  </Blueprint3.FormGroup>
-  <Blueprint3.Button
-    className="add"
-    disabled={true}
-    icon="add"
-    intent="success"
-    onClick={[Function]}
-    text="Add todo"
-  />
+  </ErrorBoundary>
   <div
     className="todoTable"
   >
-    <Blueprint3.Tabs
-      animate={true}
-      className="tabs"
-      id="todoTabs"
-      large={false}
-      renderActiveTabPanelOnly={true}
-      vertical={false}
-    >
-      <Blueprint3.Tab
-        className="tab"
-        disabled={false}
-        id="all"
-        key="all"
-        panel={
-          <TodoTable
-            items={
-              Array [
-                Object {
-                  "id": "-idA-",
-                  "isCompleted": true,
-                  "title": "TodoA",
-                },
-                Object {
-                  "id": "-idB-",
-                  "isCompleted": false,
-                  "title": "TodoB",
-                },
-              ]
-            }
-            onComplete={[Function]}
-            onDelete={[Function]}
-          />
-        }
-        title="All"
-      />
-      <Blueprint3.Tab
-        className="tab"
-        disabled={false}
-        id="completed"
-        key="completed"
-        panel={
-          <TodoTable
-            items={
-              Array [
-                Object {
-                  "id": "-idA-",
-                  "isCompleted": true,
-                  "title": "TodoA",
-                },
-              ]
-            }
-            onComplete={[Function]}
-            onDelete={[Function]}
-          />
-        }
-        title="Completed"
-      />
-      <Blueprint3.Tab
-        className="tab"
-        disabled={false}
-        id="active"
-        key="active"
-        panel={
-          <TodoTable
-            items={
-              Array [
-                Object {
-                  "id": "-idB-",
-                  "isCompleted": false,
-                  "title": "TodoB",
-                },
-              ]
-            }
-            onComplete={[Function]}
-            onDelete={[Function]}
-          />
-        }
-        title="Active"
-      />
-    </Blueprint3.Tabs>
+    <ErrorBoundary>
+      <Blueprint3.Tabs
+        animate={true}
+        className="tabs"
+        id="todoTabs"
+        large={false}
+        renderActiveTabPanelOnly={true}
+        vertical={false}
+      >
+        <Blueprint3.Tab
+          className="tab"
+          disabled={false}
+          id="all"
+          key="all"
+          panel={
+            <TodoTable
+              items={
+                Array [
+                  Object {
+                    "id": "-idA-",
+                    "isCompleted": true,
+                    "title": "TodoA",
+                  },
+                  Object {
+                    "id": "-idB-",
+                    "isCompleted": false,
+                    "title": "TodoB",
+                  },
+                ]
+              }
+              onComplete={[Function]}
+              onDelete={[Function]}
+            />
+          }
+          title="All"
+        />
+        <Blueprint3.Tab
+          className="tab"
+          disabled={false}
+          id="completed"
+          key="completed"
+          panel={
+            <TodoTable
+              items={
+                Array [
+                  Object {
+                    "id": "-idA-",
+                    "isCompleted": true,
+                    "title": "TodoA",
+                  },
+                ]
+              }
+              onComplete={[Function]}
+              onDelete={[Function]}
+            />
+          }
+          title="Completed"
+        />
+        <Blueprint3.Tab
+          className="tab"
+          disabled={false}
+          id="active"
+          key="active"
+          panel={
+            <TodoTable
+              items={
+                Array [
+                  Object {
+                    "id": "-idB-",
+                    "isCompleted": false,
+                    "title": "TodoB",
+                  },
+                ]
+              }
+              onComplete={[Function]}
+              onDelete={[Function]}
+            />
+          }
+          title="Active"
+        />
+      </Blueprint3.Tabs>
+    </ErrorBoundary>
   </div>
 </div>
 `;

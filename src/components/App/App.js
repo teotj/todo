@@ -5,6 +5,7 @@ import { Button, FormGroup, FocusStyleManager, H3, InputGroup, Intent, Tabs, Tab
 import { IconNames } from '@blueprintjs/icons';
 
 import TodoTable from 'components/TodoTable';
+import ErrorBoundary from 'components/ErrorBoundary';
 import { actions } from 'store';
 
 import css from './App.css';
@@ -68,17 +69,19 @@ export class App extends PureComponent {
 
     return (
       <React.Fragment>
-        <FormGroup className={css.formGroup}>
-          <InputGroup
-            large
-            value={itemValue}
-            placeholder="Add todo here..."
-            onChange={this.handleItemValueChange}
-            className={css.todoItem}
-            rightElement={isBlank ? null : clearButton}
-          />
-        </FormGroup>
-        {addButton}
+        <ErrorBoundary>
+          <FormGroup className={css.formGroup}>
+            <InputGroup
+              large
+              value={itemValue}
+              placeholder="Add todo here..."
+              onChange={this.handleItemValueChange}
+              className={css.todoItem}
+              rightElement={isBlank ? null : clearButton}
+            />
+          </FormGroup>
+          {addButton}
+        </ErrorBoundary>
       </React.Fragment>
     );
   };
@@ -110,16 +113,18 @@ export class App extends PureComponent {
 
     return (
       <div className={css.todoTable}>
-        <Tabs
-          id="todoTabs"
-          onChange={this.handleTabChange}
-          className={css.tabs}
-          renderActiveTabPanelOnly
-        >
-          {tabs.map((tab) => (
-            <Tab key={tab.id} {...tab} />
-          ))}
-        </Tabs>
+        <ErrorBoundary>
+          <Tabs
+            id="todoTabs"
+            onChange={this.handleTabChange}
+            className={css.tabs}
+            renderActiveTabPanelOnly
+          >
+            {tabs.map((tab) => (
+              <Tab key={tab.id} {...tab} />
+            ))}
+          </Tabs>
+        </ErrorBoundary>
       </div>
     );
   };
