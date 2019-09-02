@@ -26,7 +26,6 @@ module.exports = (env, argv) => {
       alias: {
         store: path.resolve(__dirname, 'src/store'),
         components: path.resolve(__dirname, 'src/components'),
-        pages: path.resolve(__dirname, 'src/pages'),
         'react-dom': '@hot-loader/react-dom'
       }
     },

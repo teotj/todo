@@ -16,7 +16,6 @@ module.exports = {
   moduleNameMapper: {
     '^store(.*)$': '<rootDir>/src/store$1',
     '^components/(.*)$': '<rootDir>/src/components/$1',
-    '^pages/(.*)$': '<rootDir>/src/pages/$1',
     '\\.(css|scss)$': 'identity-obj-proxy',
     '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttg|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
       '<rootDir>/test/fileMock.js'
